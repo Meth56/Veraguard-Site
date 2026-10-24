@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quote Request | VeraGuard</title>
+<meta name="description" content="Request a VeraGuard floor protection quote. Tell us the size of a typical job and we will reply.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">VeraGuard</a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="where-we-deliver.html">Where We Deliver</a>
+      <a href="quote.html" aria-current="page">Quote Request</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-head">
+    <div class="wrap">
+      <h1>Request a quote</h1>
+      <p>Tell us about the job and we will reply with a quote. Price reference: 59.99 CAD + HST per roll, 300 sq ft per roll.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <form class="form" id="quote-form" novalidate>
+        <div class="row">
+          <label>Your name
+            <input name="name" autocomplete="name" required>
+          </label>
+          <label>Company
+            <input name="company" autocomplete="organization">
+          </label>
+        </div>
+        <div class="row">
+          <label>Email
+            <input name="email" type="email" autocomplete="email" required>
+          </label>
+          <label>Phone <span class="hint">Optional</span>
+            <input name="phone" type="tel" autocomplete="tel">
+          </label>
+        </div>
+        <div class="row">
+          <label>Type of work
+            <select name="work">
+              <option value="Flooring installation">Flooring installation</option>
+              <option value="Renovation">Renovation</option>
+              <option value="Painting">Painting</option>
+              <option value="Other">Other</option>
+            </select>
+          </label>
+          <label>Rolls needed <span class="hint">Your best estimate</span>
+            <input name="rolls" type="number" min="1" inputmode="numeric">
+          </label>
+        </div>
+        <div class="row">
+          <label>Job site city or postal code
+            <input name="site" autocomplete="postal-code">
+          </label>
+          <label>Needed by <span class="hint">Optional</span>
+            <input name="date" type="date">
+          </label>
+        </div>
+        <label>Anything else we should know <span class="hint">Floor type, room sizes, how often you order</span>
+          <textarea name="message"></textarea>
+        </label>
+        <div>
+          <button class="btn" type="submit">Send quote request</button>
+        </div>
+        <p class="hint" id="form-done" hidden>Your email app should now open with the request filled in. Press send there to finish. If nothing opens, email <a href="mailto:sales@veraguard.ca">sales@veraguard.ca</a> with the same details.</p>
+        <p class="hint">This form opens an email to sales@veraguard.ca. We do not store what you type here.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <p><strong>VeraGuard</strong></p>
+      <p>Self-adhesive floor protection roll.</p>
+    </div>
+    <div>
+      <p><a href="mailto:sales@veraguard.ca">sales@veraguard.ca</a></p>
+      <p><span class="todo" data-todo="mailing-address">Mailing address: add before launch</span></p>
+    </div>
+    <div>
+      <p><a href="quote.html">Request a quote</a></p>
+      <p><a href="privacy.html">Privacy and cookies</a></p>
+    </div>
+    <p class="legal">&copy; 2026 VeraGuard. Prices are in Canadian dollars and exclude HST.</p>
+  </div>
+</footer>
+
+<div class="consent" id="consent" role="region" aria-label="Cookie notice" hidden>
+  <div class="wrap">
+    <p>We use Google Analytics to see which pages are useful. It only runs if you accept. <a href="privacy.html">Privacy and cookies</a></p>
+    <div class="actions">
+      <button class="btn" id="consent-yes" type="button">Accept analytics</button>
+      <button class="btn ghost" id="consent-no" type="button">Decline</button>
+    </div>
+  </div>
+</div>
+<script src="assets/site.js" defer></script>
+</body>
+</html>
