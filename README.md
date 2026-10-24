@@ -2,14 +2,14 @@
 
 Static site for veraguard.ca (plain HTML, CSS and one small JS file). No build step, no dependencies, no secrets.
 
-**This repo is public.** Never add secrets, email lists, leads or customer data here. Code, agents and secrets stay in the private `veraguard` repo.
+**This repo is public.** Never add secrets, email lists, leads or customer data here.
 
 ## Publish with GitHub Pages (owner steps)
 
 1. Create a new public repo (for example `veraguard-site`) and push these files to `main`.
 2. Repo Settings > Pages > Deploy from branch > `main` / root.
 3. Custom domain: enter `veraguard.ca` in Pages settings (this creates a `CNAME` file).
-4. In GoDaddy DNS add the GitHub Pages A records and a `www` CNAME to `<user>.github.io`. Do not touch the existing Zoho records (MX, SPF, DKIM).
+4. In GoDaddy DNS add the GitHub Pages A records and a `www` CNAME to `<user>.github.io`. Leave all existing mail records unchanged.
 5. Search Console: add the domain property and verify with the single DNS TXT record.
 6. Enable "Enforce HTTPS" in Pages settings once the certificate is ready.
 
@@ -42,8 +42,7 @@ https://veraguard.ca/?utm_source=email&utm_medium=outreach&utm_campaign=<campaig
 - `utm_campaign`: for example `flooring-gta-2026-10`
 - `utm_content`: the template name, for example `intro_flooring`
 
-Use lowercase and hyphens only. Never put names, email addresses or other personal data in UTM values. The mail templates live in the private repo (`templates/`) and belong to the Postacı agent, so adding the tags there is a separate change for VG-Postacı.
-
+Use lowercase and hyphens only. Never put names, email addresses or other personal data in UTM values.
 ## Claims rules
 
 - Only product facts: 3 layers, water-resistant top film, self-adhesive, 36 in x 100 ft (300 sq ft), about 12 lb, 59.99 CAD + HST per roll (0.20 CAD per sq ft).
