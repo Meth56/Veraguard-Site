@@ -50,6 +50,9 @@ p { margin: 0 0 1em; max-width: var(--measure); }
 .brand img { height: 40px; width: auto; }
 .split { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: clamp(24px, 5vw, 64px); align-items: start; }
 .photo { margin: 0; }
+.banner { margin: 0; }
+.banner img { width: 100%; height: auto; border: 1px solid var(--line); }
+.banner figcaption { font-size: .88rem; color: #4d5f78; margin-top: 8px; }
 .photo img { width: 100%; height: auto; border-radius: 2px; border: 1px solid var(--line); }
 .photo figcaption { font-size: .88rem; color: #4d5f78; margin-top: 8px; }
 .nav { display: flex; flex-wrap: wrap; gap: 4px 22px; }
