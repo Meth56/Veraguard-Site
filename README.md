@@ -17,9 +17,9 @@ Static site for veraguard.ca (plain HTML, CSS and one small JS file). No build s
 
 - [ ] Mailing address: replace every `data-todo="mailing-address"` element (footer on every page, and contact.html).
 - [ ] Google Analytics: create a GA4 property and put the measurement ID (`G-...`) in `GA_MEASUREMENT_ID` in `assets/site.js`. The ID is public, not a secret. Analytics only loads after the visitor accepts.
-- [ ] Logo and product photos: owner uploads them. Studio-quality images made from them must carry the caption "Representative image".
+- [x] Logo, favicon and the real product photo are in `assets/img/`. Any generated or illustrative product image must carry the caption "Representative image".
 - [ ] Quote form fields: confirm the list with the owner (see below).
-- [ ] Confirm which floor types the roll is suitable for before adding any list to How It Works.
+- [x] Floor types (finished hardwood, tile, laminate, vinyl and similar) come from the owner's flyer.
 
 ## Quote form
 
