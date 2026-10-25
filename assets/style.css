@@ -167,3 +167,8 @@ p { margin: 0 0 1em; max-width: var(--measure); }
 @media print {
   .site-header .nav, .consent, .actions { display: none; }
 }
+
+/* Section headings inside the facts row and the steps keep the smaller h3 look */
+.facts h2, .steps h2 { font-size: 1.25rem; }
+.facts h2 { margin-bottom: .3em; }
+.steps h2 { margin-bottom: .2em; }
