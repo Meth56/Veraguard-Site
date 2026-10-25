@@ -6,7 +6,7 @@
 (function () {
   "use strict";
 
-  var GA_MEASUREMENT_ID = ""; // e.g. "G-XXXXXXXXXX" — owner provides
+  var GA_MEASUREMENT_ID = "G-YVQWWNL7PB"; // public measurement ID, not a secret
   var KEY = "vg_consent";
 
   function read() {
