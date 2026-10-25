@@ -146,9 +146,21 @@ p { margin: 0 0 1em; max-width: var(--measure); }
   * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
 @media (prefers-reduced-motion: no-preference) {
-  .roll-edge { animation: unroll 1.6s ease-out 0.2s both; }
-  @keyframes unroll { from { transform: translateX(-110px); opacity: 0; } to { transform: none; opacity: 1; } }
+  /* One orchestrated moment: the roll unrolls, then the dimensions draw in. */
+  .film { transform-box: fill-box; transform-origin: left center; animation: film-out 2.6s cubic-bezier(.45,.05,.2,1) .5s both; }
+  .roll { animation: roll-out 2.6s cubic-bezier(.45,.05,.2,1) .5s both; }
+  .dim { animation: dim-draw 1s ease-out 3.1s both; }
+  .tick, .fade-in { animation: fade-in .8s ease-out 3.3s both; }
+  @keyframes film-out { from { transform: scaleX(0); } }
+  @keyframes roll-out { from { transform: translateX(-450px); } }
+  @keyframes dim-draw { from { stroke-dasharray: 1; stroke-dashoffset: 1; } to { stroke-dasharray: 1; stroke-dashoffset: 0; } }
+  @keyframes fade-in { from { opacity: 0; } }
 }
+.diagram { margin: 0; }
+.diagram svg { width: 100%; max-width: 760px; height: auto; }
+.diagram figcaption { font-size: .88rem; color: #4d5f78; margin-top: 8px; }
+.chips { list-style: none; padding: 0; margin: 0 0 1.2em; display: flex; flex-wrap: wrap; gap: 10px; }
+.chips li { border: 1.5px solid var(--navy); padding: 6px 14px; border-radius: 999px; font-size: .95rem; color: var(--navy); background: var(--white); }
 @media print {
   .site-header .nav, .consent, .actions { display: none; }
 }
