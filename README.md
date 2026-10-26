@@ -17,7 +17,7 @@ Static site for veraguard.ca (plain HTML, CSS and one small JS file). No build s
 
 - [x] Mailing address: replace every `data-todo="mailing-address"` element (footer on every page, and contact.html).
 - [x] Google Analytics: create a GA4 property and put the measurement ID (`G-...`) in `GA_MEASUREMENT_ID` in `assets/site.js`. The ID is public, not a secret. Analytics only loads after the visitor accepts.
-- [x] Logo, favicon and the real product photo are in `assets/img/`. Any generated or illustrative product image must carry the caption "Representative image".
+- [x] Logo, favicon and the real product photo are in `assets/img/`.
 - [ ] Quote form fields: confirm the list with the owner (see below).
 - [x] Floor types (finished hardwood, tile, laminate, vinyl and similar) come from the owner's flyer.
 
@@ -46,7 +46,7 @@ Use lowercase and hyphens only. Never put names, email addresses or other person
 ## Claims rules
 
 - Only product facts: 3 layers, waterproof top film, self-adhesive, 36 in x 100 ft (300 sq ft), about 12 lb, 59.99 CAD + HST per roll (0.20 CAD per sq ft).
-- No fire or "leaves no residue" claims. "Waterproof" and "anti-slip" are allowed (owner-tested and approved). "Test a small area first" stays visible.
+- No fire or "leaves no residue" claims. "Waterproof" and "anti-slip" are allowed. "Test a small area first" stays visible.
 - No samples. Delivery: 3 or more rolls, within 30 km in the GTA, further on request.
 - The only name on the site is "VeraGuard".
 - Do not copy any competitor's catalogue text or images.
