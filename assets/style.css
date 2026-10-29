@@ -231,3 +231,7 @@ p { margin: 0 0 1em; max-width: var(--measure); }
 .catalog-text h2 { margin-top: 0; }
 .btn.big { font-size: 1.1rem; padding: 14px 26px; }
 @media (max-width: 820px) { .catalog-inner { flex-direction: column; text-align: center; } .catalog-inner .actions { justify-content: center; } .catalog-cover { width: 160px; } }
+
+/* Product video */
+.promo-video { border-radius: 2px; overflow: hidden; background: var(--navy); box-shadow: 0 0 0 1px rgba(15,42,74,.08); }
+.promo-video video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; }
