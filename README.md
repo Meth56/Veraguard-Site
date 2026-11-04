@@ -15,7 +15,7 @@ Static site for veraguard.ca (plain HTML, CSS and one small JS file). No build s
 
 ## Before launch checklist
 
-- [x] Mailing address: replace every `data-todo="mailing-address"` element (footer on every page, and contact.html).
+- [x] Location: footer and contact page show the city only ("Woodbridge, ON"), owner decision 3 Nov 2026; no street address on the site.
 - [x] Google Analytics: create a GA4 property and put the measurement ID (`G-...`) in `GA_MEASUREMENT_ID` in `assets/site.js`. The ID is public, not a secret. Analytics only loads after the visitor accepts.
 - [x] Logo, favicon and the real product photo are in `assets/img/`.
 - [ ] Quote form fields: confirm the list with the owner (see below).
