@@ -45,7 +45,7 @@ https://veraguard.ca/?utm_source=email&utm_medium=outreach&utm_campaign=<campaig
 Use lowercase and hyphens only. Never put names, email addresses or other personal data in UTM values.
 ## Claims rules
 
-- Only product facts: 3 layers, waterproof top film, self-adhesive, 36 in x 100 ft (300 sq ft), about 12 lb, 59.99 CAD + HST per roll (0.20 CAD per sq ft).
+- Only product facts: 3 layers, waterproof top film, self-adhesive, 36 in x 100 ft (300 sq ft), about 12 lb, 69.99 CAD + HST per roll (0.23 CAD per sq ft).
 - No fire or "leaves no residue" claims. "Waterproof" and "anti-slip" are allowed. "Test a small area first" stays visible.
 - No samples. Delivery: 3 or more rolls, within 30 km in the GTA, further on request.
 - The only name on the site is "VeraGuard".
