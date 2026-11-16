@@ -74,6 +74,40 @@
     });
   });
 
+  // Roll calculator: 300 sq ft per roll, rounded up; delivery is free from 3 rolls.
+  var area = document.getElementById("calc-area");
+  if (area) {
+    var out = {
+      rolls: document.getElementById("calc-rolls"), price: document.getElementById("calc-price"),
+      note: document.getElementById("calc-note"), quote: document.getElementById("calc-quote")
+    };
+    var fmt = function (n, d) { return n.toLocaleString("en-CA", { minimumFractionDigits: d, maximumFractionDigits: d }); };
+    var calc = function () {
+      var a = Math.max(0, Math.round(parseFloat(area.value) || 0));
+      var r = Math.max(1, Math.ceil(a / 300));
+      out.rolls.textContent = r;
+      out.price.textContent = fmt(r * 69.99, 2);
+      out.note.textContent = r + (r === 1 ? " roll covers " : " rolls cover ") + fmt(r * 300, 0) + " sq ft. ";
+      var b = document.createElement("strong");
+      b.textContent = r >= 3 ? "Free job-site delivery in the GTA." : "Order 3 rolls or more for free job-site delivery in the GTA.";
+      out.note.appendChild(b);
+      out.quote.href = "quote.html?rolls=" + r + (a ? "&area=" + a : "");
+      out.quote.firstChild.nodeValue = "Quote for " + r + (r === 1 ? " roll " : " rolls ");
+    };
+    area.addEventListener("input", calc);
+    calc();
+  }
+
+  // Arriving from the calculator: fill in the roll count and the floor area.
+  if (form) {
+    try {
+      var qs = new URLSearchParams(window.location.search);
+      var qr = parseInt(qs.get("rolls"), 10), qa = parseInt(qs.get("area"), 10);
+      if (qr > 0 && form.elements.rolls) form.elements.rolls.value = qr;
+      if (qa > 0 && form.elements.message && !form.elements.message.value) form.elements.message.value = "Floor area: about " + qa + " sq ft.";
+    } catch (e) { /* old browser: nothing to fill */ }
+  }
+
   // Quote form: opens the visitor's email app with the details filled in.
   // No server, no third-party form service, no stored data.
   if (form) {
