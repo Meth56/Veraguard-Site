@@ -42,36 +42,32 @@
   #roll .roll__pic { --ratio: 66%; }
   #layers .layers__side { display: flex; flex-direction: column; gap: var(--s-6); align-self: stretch; }
   #layers .layers__side .frame { margin-top: auto; width: calc((100% - 4 * 24px) / 5 * 3 + 2 * 24px); }
-  #layers .layers__tall { --ratio: 108%; }
-  .head-row { margin-bottom: var(--s-7); }
+  #layers .layers__tall { --ratio: 92%; }
+  .head-row { margin-bottom: var(--s-6); }
   .head-row > h2, .head-row p { margin: 0; }
-  #film .film { margin: 0; aspect-ratio: 16 / 9; max-height: calc(100svh - 440px); width: 100%; }
+  #film .film { margin: 0; aspect-ratio: 16 / 9; max-height: 540px; width: 100%; }
   #film .film > video { display: block; width: 100%; height: 100%; object-fit: contain; background: var(--p-ink); border-radius: var(--r-lg); }
   #film .film > video:focus-visible { outline: 2px solid var(--p-ink); outline-offset: 3px; }
   #film .film__chapters { margin-top: var(--s-5); }
-  #delivery .bleed { margin: 0 calc(50% - 50vw); width: 100vw; height: clamp(320px, 100svh - 420px, 560px); overflow: clip; }
+  #delivery .bleed { margin: 0; width: 100%; height: clamp(240px, 30vw, 440px); overflow: clip; border-radius: var(--r-lg); }
   #delivery .bleed > img { width: 100%; height: 100%; object-fit: cover; object-position: 60% 60%; display: block; }
-  #faq .faq__pic { --ratio: 75%; }
   @media (min-width: 1024px) and (max-width: 1279px) { #steps .grid > .card { grid-column: span 4; } #steps .panel { --p-h: 240px; } }
   @media (max-width: 1023px) {
     #roll .roll__pic { --ratio: 36%; }
     #layers .layers__side .frame { display: none; }
     #layers .layers__tall { --ratio: 50%; }
-    #faq .faq__pic { --ratio: 36%; }
   }
   @media (min-width: 640px) and (max-width: 1023px) { #steps { --h: 2; } }
   @media (max-width: 639px) {
     /* the hero photograph takes what the head leaves, as the kit's render stage does on a phone */
-    .hero--product .hero__stage { flex: 1 1 auto; aspect-ratio: auto; min-height: 240px; }
     .head-row { margin-bottom: var(--s-6); row-gap: var(--s-4); }
     #steps .panel { --p-h: 200px; }
     /* the roll's photograph goes above its rows on a phone, clear of the action bar at the screen's foot */
     #roll .roll__pic { --ratio: 30%; order: -1; }
     #roll .rows__wide { display: none; }
     #roll .roll__pic > img { object-position: 50% 44% !important; }
-    #roll .roll__pdf, #faq .faq__mail { display: none; }
-    #faq .faq__pic { --ratio: 26%; }
-    #delivery .bleed { height: auto; aspect-ratio: 1; }
+    #roll .roll__pdf { display: none; }
+    #delivery .bleed { height: auto; aspect-ratio: 4 / 3; }
   }
 </style>
 </head>
@@ -116,6 +112,7 @@
     </nav>
     <a class="nav__logo" href="#top"><img src="assets/img/logo-320.png" alt="VeraGuard floor protection" width="152" height="32"></a>
     <div class="nav__actions">
+      <a class="nav__phone" href="tel:+14375752101">+1 437-575-2101</a>
       <a class="btn btn--primary" href="quote.html">Request a quote</a>
     </div>
     <button class="nav__toggle" type="button" aria-expanded="false" aria-label="Menu">
@@ -133,10 +130,17 @@
           <p class="hero__lead">A three-layer sheet that sticks to finished floors without tape. 36 in by 100 ft, 69.99 CAD + HST a roll, delivered to your job site.</p>
         </div>
         <div class="btn-row"><a class="btn btn--primary" href="quote.html">Request a quote<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a><a class="btn btn--secondary" href="#roll">See the specs</a></div>
+        <p class="hero__contact t-small"><a class="link" href="tel:+14375752101">Call +1 437-575-2101</a><a class="link" href="mailto:sales@veraguard.ca">Email sales@veraguard.ca</a></p>
       </div>
       <div class="hero__stage">
         <img src="assets/img/room-covered.jpg" srcset="assets/img/room-covered-800.jpg 800w, assets/img/room-covered.jpg 1200w" sizes="(max-width: 639px) 800px, 100vw" width="1200" height="670" alt="An empty room with a white VeraGuard sheet covering half of a herringbone hardwood floor and a stepladder by the window" style="--ly-pos: 40% 70%" fetchpriority="high" data-source="client" data-subject="the sheet laid over half a finished floor">
       </div>
+      <ul class="facts" aria-label="Key facts">
+        <li><strong>300 sq ft</strong><span>per roll, 36 in × 100 ft</span></li>
+        <li><strong>No tape needed</strong><span>self-adhesive backing</span></li>
+        <li><strong>Reusable</strong><span>waterproof, anti-slip top film</span></li>
+        <li><strong>Free delivery</strong><span>3+ rolls to GTA job sites, within 30 km</span></li>
+      </ul>
     </div></div>
   </section>
 
@@ -259,9 +263,7 @@
         <div class="span-5 stack-4">
           <h2 id="faq-h">Questions</h2>
           <p class="faq__mail"><a class="link" href="mailto:sales@veraguard.ca">Email sales@veraguard.ca</a></p>
-          <figure class="frame frame--photo faq__pic">
-            <img class="frame__img" src="assets/img/roll-core-label.jpg" width="640" height="640" alt="A VeraGuard roll standing on end on a herringbone floor, the logo on its core label" style="object-position: 50% 45%" loading="lazy" data-source="client" data-subject="the roll on end, its label">
-          </figure>
+          <p class="faq__mail"><a class="link" href="tel:+14375752101">Call +1 437-575-2101</a></p>
         </div>
         <div class="faq span-6 start-7">
           <div class="faq__item"><h3>Does the roll need tape?</h3><p>No. The backing is self-adhesive, so the sheet goes down without tape.</p></div>
@@ -274,14 +276,13 @@
   </section>
 </main>
 
-<footer class="footer closing footer--dark ground-inverse g2m" id="contact" aria-labelledby="close-h">
+<footer class="footer closing footer--dark ground-inverse" id="contact" aria-labelledby="close-h">
   <div class="wrap">
     <div class="closing__cta close--word">
       <div class="section-head--split">
         <div><h2 id="close-h">Request a quote for your next job</h2><p class="t-lead">Send the floor area and the site's city. We reply with a price for rolls and delivery.</p></div>
         <a class="btn btn--primary" href="quote.html">Request a quote<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
       </div>
-      <p class="close__word" aria-hidden="true">VeraGuard</p>
     </div>
     <div class="closing__links">
       <div class="grid">
