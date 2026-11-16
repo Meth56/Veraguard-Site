@@ -82,6 +82,7 @@
       <div class="nav__item"><a class="nav__link" href="how-it-works.html">Install</a></div>
       <div class="nav__item"><a class="nav__link" href="where-we-deliver.html">Delivery</a></div>
       <div class="nav__item"><a class="nav__link" href="index.html#faq">Questions</a></div>
+      <div class="nav__item"><a class="nav__link" href="assets/VeraGuard-Catalog.pdf" download>Catalog (PDF)</a></div>
     </nav>
     <a class="nav__logo" href="#top"><img src="assets/img/logo-320.png" alt="VeraGuard floor protection" width="152" height="32"></a>
     <div class="nav__actions">
@@ -115,17 +116,38 @@
             <li><span class="rows__name">Roll size</span><span class="rows__value">36 in × 100 ft (91 cm × 30.5 m)</span></li>
             <li><span class="rows__name">Coverage</span><span class="rows__value">300 sq ft (27.9 m²)</span></li>
             <li><span class="rows__name">Weight</span><span class="rows__value">About 12 lb (5.4 kg)</span></li>
-            <li><span class="rows__name">Use on</span><span class="rows__value">Finished hardwood, tile, laminate, vinyl</span></li>
+            <li><span class="rows__name">Use on</span><span class="rows__value">Hardwood, engineered wood, parquet, bamboo, laminate, luxury vinyl plank, sheet vinyl, ceramic and porcelain tile, marble, natural stone, terrazzo, polished concrete, epoxy</span></li>
             <li><span class="rows__name">Price</span><span class="rows__value">69.99 CAD + HST a roll</span></li>
+            <li><span class="rows__name">Reusable</span><span class="rows__value">Yes, lift it and lay it again</span></li>
             <li><span class="rows__name">Minimum order</span><span class="rows__value">None</span></li>
-            <li><span class="rows__name">Job-site delivery</span><span class="rows__value">Free on 3+ rolls, 30 km in the GTA</span></li>
+            <li><span class="rows__name">Job-site delivery</span><span class="rows__value">Free on 3+ rolls in the GTA, further out on request</span></li>
             <li><span class="rows__name">Returns</span><span class="rows__value">Unopened rolls, 30 days</span></li>
           </ul>
-          <p class="note" style="margin-top: var(--s-6)"><strong>Please test a small area first.</strong> Floors and finishes vary, and there are no samples: a small patch from your first roll is the test.</p>
         </div>
         <figure class="frame frame--photo span-6 start-7" style="--ratio: 125%">
           <img class="frame__img" src="assets/img/roll-studio.jpg" srcset="assets/img/roll-studio-480.jpg 480w, assets/img/roll-studio.jpg 720w" sizes="(max-width: 639px) 100vw, 628px" width="720" height="1065" alt="A white VeraGuard roll partly unrolled on a herringbone hardwood floor" fetchpriority="high">
         </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section flow" id="calculator" aria-labelledby="calc-h">
+    <div class="wrap">
+      <div class="calc">
+        <div class="calc__in">
+          <h2 id="calc-h">Roll calculator</h2>
+          <p class="muted">Each VeraGuard roll covers 300 sq ft. Enter the floor area of the job and we round up to whole rolls.</p>
+          <label class="calc__label" for="calc-area">Floor area</label>
+          <div class="calc__field"><input id="calc-area" type="number" inputmode="numeric" min="1" step="1" value="2500" aria-describedby="calc-note"><span>sq ft</span></div>
+        </div>
+        <div class="calc__out ground-inverse" aria-live="polite">
+          <div class="calc__nums">
+            <div><b id="calc-rolls">9</b><span>rolls</span></div>
+            <div><b id="calc-price">629.91</b><span>CAD + HST</span></div>
+          </div>
+          <p class="calc__note" id="calc-note">9 rolls cover 2,700 sq ft. <strong>Free job-site delivery in the GTA.</strong></p>
+          <a class="btn btn--primary" id="calc-quote" href="quote.html?rolls=9&amp;area=2500">Quote for 9 rolls <svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+        </div>
       </div>
     </div>
   </section>

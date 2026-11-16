@@ -7,6 +7,6 @@ Oturum başında özel repodaki `Meth56/veraguard` içinde `CLAUDE.md` ve `docs/
 
 ## Site kuralları
 - Sitede yalnızca "VeraGuard" adı geçer. Ürün "waterproof" ve "anti-slip" olarak yazılabilir. Yangın ve "kalıntı bırakmaz" iddiası yok. Numune yok. Uydurma yorum, rating, sertifika yok.
-- Fiyat: 69.99 CAD + HST / rulo (0.23 CAD / sq ft). Teslimat: 3 veya daha fazla rulo, GTA içi 30 km, uzağı talep üzerine.
-- "Test a small area first" görünür kalır.
+- Fiyat: 69.99 CAD + HST / rulo (0.23 CAD / sq ft). Teslimat: 3 veya daha fazla rulo GTA içinde ücretsiz, uzağı talep üzerine. Sitede km sınırı ve numune yazılmaz.
+- Ürün "reusable" olarak yazılır. Site herkese hitap eder; GTA yalnızca teslimat koşulunda geçer.
 - Ücretsiz katmanlarla kal. PR ile gel, Kaptan inceler.
