@@ -1,6 +1,8 @@
 # VeraGuard website
 
-Static site for veraguard.ca (plain HTML, CSS and one small JS file). No build step, no dependencies, no secrets.
+Static site for veraguard.ca (plain HTML, CSS and JS). No build step, no dependencies, no secrets.
+
+Design system (Nov 2026 redesign): built with the tasteskill design kit. `assets/system.css`, `system.js`, `motion/`, `layout/`, `ui/`, `moments/` are the kit's files, copied unchanged (MIT, see `assets/THIRD-PARTY.md`); do not edit them. VeraGuard's own colours, font and page rules live in `assets/vg.css`; `assets/site.js` keeps the analytics consent, the GA events, the quote form and the film chapter buttons. The Archivo font is served from `assets/fonts/`, so the site makes no third-party font requests.
 
 **This repo is public.** Never add secrets, email lists, leads or customer data here.
 

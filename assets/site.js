@@ -44,7 +44,7 @@
     else if (href.indexOf("tel:") === 0) track("phone_click", { link_url: href });
   });
   var form = document.getElementById("quote-form");
-  if (form) form.addEventListener("submit", function () { track("quote_submit", { form_id: "quote-form" }); });
+  if (form) form.addEventListener("submit", function (e) { if (!e.defaultPrevented) track("quote_submit", { form_id: "quote-form" }); });
 
   // Consent banner
   var banner = document.getElementById("consent");
@@ -63,10 +63,22 @@
   var reset = document.getElementById("consent-reset");
   if (reset) reset.addEventListener("click", function (e) { e.preventDefault(); write(""); if (banner) banner.hidden = false; });
 
+  // Film chapters: a button jumps the product film to its part and plays it.
+  document.querySelectorAll("[data-seek]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var v = document.getElementById(b.getAttribute("aria-controls"));
+      if (!v) return;
+      var t = parseFloat(b.getAttribute("data-seek")) || 0;
+      var go = function () { try { v.currentTime = t; } catch (e) { /* not seekable yet */ } var p = v.play(); if (p && p.catch) p.catch(function () {}); };
+      if (v.readyState >= 1) go(); else { v.preload = "auto"; v.addEventListener("loadedmetadata", go, { once: true }); v.load(); }
+    });
+  });
+
   // Quote form: opens the visitor's email app with the details filled in.
   // No server, no third-party form service, no stored data.
   if (form) {
     form.addEventListener("submit", function (e) {
+      if (e.defaultPrevented) return; // system.js found a field to fix
       e.preventDefault();
       var f = form.elements;
       function v(n) { return (f[n] && f[n].value || "").trim(); }

@@ -1,132 +1,193 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-type="product" data-radius="soft" data-buttons="solid" data-motion>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; style-src 'self' 'unsafe-inline'; base-uri 'none'; object-src 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<meta name="theme-color" content="#0f2a4a">
-<title>Quote Request | VeraGuard</title>
-<meta name="description" content="Request a VeraGuard floor protection quote. Tell us the size of a typical job and we will reply.">
+<title>Request a VeraGuard quote</title>
+<meta name="description" content="Send the job size and site and VeraGuard replies with a quote for floor protection rolls and delivery. 69.99 CAD + HST per 300 sq ft roll.">
 <link rel="canonical" href="https://veraguard.ca/quote.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="VeraGuard">
 <meta property="og:locale" content="en_CA">
-<meta property="og:title" content="Quote Request | VeraGuard">
-<meta property="og:description" content="Request a VeraGuard floor protection quote. Tell us the size of a typical job and we will reply.">
+<meta property="og:title" content="Request a VeraGuard quote">
+<meta property="og:description" content="Send the job size and site and VeraGuard replies with a quote for floor protection rolls and delivery. 69.99 CAD + HST per 300 sq ft roll.">
 <meta property="og:url" content="https://veraguard.ca/quote.html">
 <meta property="og:image" content="https://veraguard.ca/assets/img/room-covered.jpg">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f3f4f6">
+<meta name="site-kind" content="other">
+<meta name="page-type" content="product">
 <link rel="icon" type="image/png" href="assets/img/favicon-64.png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-<link rel="stylesheet" href="assets/style.css">
+<link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/system.css">
+<link rel="stylesheet" href="assets/ui/cards.css">
+<link rel="stylesheet" href="assets/motion/motion.css">
+<link rel="stylesheet" href="assets/layout/layout.css">
+<link rel="stylesheet" href="assets/vg.css">
+<script src="assets/boot.js"></script>
+<style>
+  main > .section.page-head { --h: auto; height: auto; min-height: 0; padding-top: calc(var(--nav) + var(--s-8)); padding-bottom: var(--s-8); }
+  .page-head h1 { font: var(--display-weight) clamp(40px, 4.4vw + 12px, 72px)/1.02 var(--font-display); letter-spacing: var(--display-tracking-xl); font-stretch: var(--display-stretch, 100%); margin: 0 0 var(--s-5); max-width: 18ch; }
+  .page-head .t-lead { max-width: 52ch; }
+  main > .section.flow { height: auto; min-height: 0; padding-block: var(--s-8); }
+  .flow + .flow { padding-top: 0; }
+  .flow.ground-inverse, .flow.ground-surface { padding-block: var(--s-9); }
+  .flow.ground-inverse + .flow, .flow.ground-surface + .flow { padding-top: var(--s-9); }
+  .flow h2 { margin-bottom: var(--s-5); }
+  .flow p + p { margin-top: var(--s-4); }
+  .stack-6 > * + * { margin-top: var(--s-6); }
+  .note { border-left: 3px solid var(--action); padding: var(--s-2) 0 var(--s-2) var(--s-5); }
+  .trades { display: flex; flex-wrap: wrap; gap: var(--s-3); padding: 0; margin: 0; list-style: none; }
+  .trades li { padding: var(--s-2) var(--s-4); border: 1px solid var(--line); border-radius: 999px; font-size: var(--t-small); }
+  .steps-list { counter-reset: s; list-style: none; padding: 0; margin: 0; }
+  .steps-list li { display: grid; grid-template-columns: 48px 1fr; gap: var(--s-2) var(--s-4); padding-block: var(--s-5); border-bottom: 1px solid var(--line); }
+  .steps-list li:first-child { padding-top: 0; }
+  .steps-list .step-num { grid-row: span 2; }
+  .steps-list h2 { font: 500 var(--t-lead)/1.3 var(--font-text); letter-spacing: 0; margin: 0; }
+  .steps-list p { margin: 0; }
+  .photos3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-5); }
+  @media (max-width: 639px) { .photos3 { grid-template-columns: 1fr; } main > .section.page-head { padding-top: calc(var(--nav) + var(--s-7)); } }
+
+  .field textarea { min-height: 120px; padding: var(--s-3) var(--s-4); font: inherit; border: 1px solid var(--line-strong); border-radius: var(--r-sm); background: var(--bg); color: var(--ink); }
+  @media (max-width: 639px) { .form { grid-template-columns: 1fr; } }
+</style>
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="site-header">
-  <div class="wrap">
-    <a class="brand" href="index.html"><img src="assets/img/logo.png" alt="VeraGuard" width="190" height="40"></a>
-    <nav class="nav" aria-label="Main">
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="how-it-works.html">How It Works</a>
-      <a href="where-we-deliver.html">Where We Deliver</a>
-      <a class="nav-cta" href="quote.html" aria-current="page">Quote Request</a>
-      <a href="contact.html">Contact</a>
+<header class="nav nav--split">
+  <div class="wrap nav__bar">
+    <a class="skip-link" href="#top">Skip to content</a>
+    <nav class="nav__links" aria-label="Main">
+      <div class="nav__item">
+        <a class="nav__link" href="index.html#roll">Roll <svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div class="nav__menu">
+          <div class="wrap grid">
+            <a class="menu-card span-3" href="index.html#roll">
+              <div class="panel"><img class="frame__img" src="assets/img/roll-core-label.jpg" width="640" height="640" alt="A VeraGuard roll standing on end on a herringbone floor" loading="lazy"></div>
+              <span class="t-card">The roll</span>
+              <span class="t-small muted">69.99 CAD + HST, 300 sq ft</span>
+            </a>
+            <a class="menu-card span-3" href="index.html#layers">
+              <div class="panel"><img class="frame__img" src="assets/img/roll-end.jpg" width="640" height="640" alt="The end of a VeraGuard roll showing its wound layers" loading="lazy"></div>
+              <span class="t-card">Three layers</span>
+              <span class="t-small muted">Film, felt, adhesive backing</span>
+            </a>
+            <a class="menu-card span-3" href="assets/VeraGuard-Catalog.pdf">
+              <div class="panel"><img class="frame__img" src="assets/img/catalog-cover.jpg" width="765" height="990" alt="The cover of the VeraGuard catalog" loading="lazy"></div>
+              <span class="t-card">Catalog</span>
+              <span class="t-small muted">Specs on one page, PDF</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="nav__item"><a class="nav__link" href="how-it-works.html">Install</a></div>
+      <div class="nav__item"><a class="nav__link" href="where-we-deliver.html">Delivery</a></div>
+      <div class="nav__item"><a class="nav__link" href="index.html#faq">Questions</a></div>
     </nav>
+    <a class="nav__logo" href="#top"><img src="assets/img/logo-320.png" alt="VeraGuard floor protection" width="152" height="32"></a>
+    <div class="nav__actions">
+      <a class="btn btn--primary" href="quote.html">Request a quote</a>
+    </div>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-label="Menu">
+      <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5h14M2 13h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
   </div>
 </header>
 
-<main id="main">
-  <section class="page-head">
+<main id="top">
+  <section class="section page-head" data-enter aria-labelledby="page-h">
     <div class="wrap">
-      <h1>Request a quote</h1>
-      <p>Tell us about the job and we will reply with a quote. Price reference: 69.99 CAD + HST per roll, 300 sq ft per roll.</p>
+      <h1 id="page-h">Request a quote</h1>
+      <p class="t-lead">Tell us about the job and we reply with a price for the rolls and delivery. For reference: 69.99 CAD + HST a roll, 300 sq ft each.</p>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section flow" id="form" aria-labelledby="form-h">
     <div class="wrap">
-      <form class="form" id="quote-form" action="mailto:sales@veraguard.ca?subject=Quote%20request" method="post" enctype="text/plain" novalidate>
-        <div class="row">
-          <label>Your name
-            <input name="name" autocomplete="name" required>
-          </label>
-          <label>Company
-            <input name="company" autocomplete="organization">
-          </label>
+      <div class="grid grid--top">
+        <div class="span-7">
+          <h2 id="form-h" class="sr-only">Quote request form</h2>
+          <form class="form" id="quote-form" action="mailto:sales@veraguard.ca?subject=Quote%20request" method="post" enctype="text/plain" novalidate>
+            <div class="field"><label for="q-name">Your name</label>
+              <input id="q-name" name="name" type="text" autocomplete="name" required aria-describedby="q-name-err">
+              <p class="field__error" id="q-name-err" hidden>Write your name so we know who to reply to.</p></div>
+            <div class="field"><label for="q-company">Company</label>
+              <input id="q-company" name="company" type="text" autocomplete="organization"></div>
+            <div class="field"><label for="q-email">Email</label>
+              <input id="q-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="q-email-err">
+              <p class="field__error" id="q-email-err" hidden>Write an email address with an @, like name@company.ca.</p></div>
+            <div class="field"><label for="q-phone">Phone (optional)</label>
+              <input id="q-phone" name="phone" type="tel" autocomplete="tel"></div>
+            <div class="field"><label for="q-work">Type of work</label>
+              <select id="q-work" name="work">
+                <option value="Flooring installation">Flooring installation</option>
+                <option value="Renovation">Renovation</option>
+                <option value="Painting">Painting</option>
+                <option value="Other">Other</option>
+              </select></div>
+            <div class="field"><label for="q-rolls">Rolls needed (best estimate)</label>
+              <input id="q-rolls" name="rolls" type="text" inputmode="numeric" autocomplete="off"></div>
+            <div class="field"><label for="q-site">Job site city or postal code</label>
+              <input id="q-site" name="site" type="text" autocomplete="postal-code"></div>
+            <div class="field"><label for="q-date">Needed by (optional)</label>
+              <input id="q-date" name="date" type="date"></div>
+            <div class="field field--full"><label for="q-msg">Anything else: floor type, room sizes, how often you order</label>
+              <textarea id="q-msg" name="message" rows="4"></textarea></div>
+            <div class="btn-row"><button class="btn btn--primary" type="submit">Request a quote</button></div>
+            <p class="form__status" role="status" data-form-status></p>
+            <p class="t-small muted" id="form-done" hidden>Your email app should now open with the request filled in. Press send there to finish. If nothing opens, email <a class="link" href="mailto:sales@veraguard.ca">sales@veraguard.ca</a> with the same details.</p>
+            <p class="t-small muted">The form opens an email to sales@veraguard.ca. Nothing you type is stored on this site.</p>
+          </form>
         </div>
-        <div class="row">
-          <label>Email
-            <input name="email" type="email" autocomplete="email" required>
-          </label>
-          <label>Phone <span class="hint">Optional</span>
-            <input name="phone" type="tel" autocomplete="tel">
-          </label>
-        </div>
-        <div class="row">
-          <label>Type of work
-            <select name="work">
-              <option value="Flooring installation">Flooring installation</option>
-              <option value="Renovation">Renovation</option>
-              <option value="Painting">Painting</option>
-              <option value="Other">Other</option>
-            </select>
-          </label>
-          <label>Rolls needed <span class="hint">Your best estimate</span>
-            <input name="rolls" type="number" min="1" inputmode="numeric">
-          </label>
-        </div>
-        <div class="row">
-          <label>Job site city or postal code
-            <input name="site" autocomplete="postal-code">
-          </label>
-          <label>Needed by <span class="hint">Optional</span>
-            <input name="date" type="date">
-          </label>
-        </div>
-        <label>Anything else we should know <span class="hint">Floor type, room sizes, how often you order</span>
-          <textarea name="message"></textarea>
-        </label>
-        <div>
-          <button class="btn" type="submit">Send quote request</button>
-        </div>
-        <p class="hint" id="form-done" hidden>Your email app should now open with the request filled in. Press send there to finish. If nothing opens, email <a href="mailto:sales@veraguard.ca">sales@veraguard.ca</a> with the same details.</p>
-        <p class="hint">This form opens an email to sales@veraguard.ca. We do not store what you type here.</p>
-      </form>
+        <aside class="span-4 start-9 stack-4">
+          <figure class="frame frame--photo frame--square"><img class="frame__img" src="assets/img/roll-core-label.jpg" width="640" height="640" alt="A VeraGuard roll standing on end, its label on the core" loading="lazy"></figure>
+          <h3>Rather call or write?</h3>
+          <p><a class="link" href="tel:+14375752101">+1 437-575-2101</a><br><a class="link" href="mailto:sales@veraguard.ca">sales@veraguard.ca</a></p>
+          <p class="t-small muted">How many rolls: divide the floor area by 300 and round up. A 2,500 sq ft job takes 9 rolls.</p>
+        </aside>
+      </div>
     </div>
   </section>
+
 </main>
 
-<footer class="site-footer">
+<footer class="footer closing footer--dark ground-inverse g2m" id="contact" aria-labelledby="close-h">
   <div class="wrap">
-    <div>
-      <p><strong>VeraGuard</strong></p>
-      <p>Self-adhesive floor protection roll.</p>
+    <div class="closing__links">
+      <div class="grid">
+        <div class="span-4 stack-4">
+          <a class="nav__logo" href="index.html"><img class="footer__logo" src="assets/img/logo-white-360.png" alt="VeraGuard floor protection" width="171" height="36" loading="lazy"></a>
+          <p class="footer__lede">Self-adhesive floor protection, from Woodbridge, ON.</p>
+        </div>
+        <div class="span-2 footer__col"><h3>Roll</h3><ul><li><a href="products.html">Specifications</a></li><li><a href="index.html#layers">Layers</a></li><li><a href="assets/VeraGuard-Catalog.pdf">Catalog PDF</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Install</h3><ul><li><a href="how-it-works.html">How to lay it</a></li><li><a href="index.html#faq">Questions</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Delivery</h3><ul><li><a href="where-we-deliver.html">Delivery area</a></li><li><a href="quote.html">Quote request</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Contact</h3><ul><li><a href="mailto:sales@veraguard.ca">sales@veraguard.ca</a></li><li><a href="tel:+14375752101">+1 437-575-2101</a></li><li><a href="contact.html">Contact page</a></li></ul></div>
+      </div>
+      <div class="footer__legal">
+        <span>&copy; 2026 VeraGuard &nbsp; <a href="privacy.html">Privacy and cookies</a> &nbsp; Prices in CAD, plus HST</span>
+        <div class="socials"></div>
+      </div>
+      <div class="consent ground-base" id="consent" role="region" aria-label="Cookie notice" hidden>
+        <p>We use Google Analytics to see which pages are useful. It only runs if you accept. <a class="link" href="privacy.html">Privacy and cookies</a></p>
+        <div class="btn-row">
+          <button class="btn btn--primary" id="consent-yes" type="button">Accept analytics</button>
+          <button class="btn btn--secondary" id="consent-no" type="button">Decline</button>
+        </div>
+      </div>
     </div>
-    <div>
-      <p><a href="mailto:sales@veraguard.ca">sales@veraguard.ca</a></p>
-      <p><a href="tel:+14375752101">+1 437-575-2101</a></p>
-      <p>Based in Woodbridge, ON</p>
-    </div>
-    <div>
-      <p><a href="quote.html">Request a quote</a></p>
-      <p><a href="assets/VeraGuard-Catalog.pdf" download>Download catalog (PDF)</a></p>
-      <p><a href="privacy.html">Privacy and cookies</a></p>
-    </div>
-    <p class="legal">&copy; 2026 VeraGuard. Prices are in Canadian dollars and exclude HST.</p>
   </div>
 </footer>
 
-<div class="consent" id="consent" role="region" aria-label="Cookie notice" hidden>
-  <div class="wrap">
-    <p>We use Google Analytics to see which pages are useful. It only runs if you accept. <a href="privacy.html">Privacy and cookies</a></p>
-    <div class="actions">
-      <button class="btn" id="consent-yes" type="button">Accept analytics</button>
-      <button class="btn ghost" id="consent-no" type="button">Decline</button>
-    </div>
-  </div>
-</div>
+<nav class="actionbar" aria-label="Quick actions">
+  <a class="btn btn--primary" href="quote.html">Request a quote</a>
+</nav>
+
+<script type="module" src="assets/system.js"></script>
+<script type="module" src="assets/motion/motion.js"></script>
+<script type="module" src="assets/layout/layout.js"></script>
 <script src="assets/site.js" defer></script>
 </body>
 </html>

@@ -1,198 +1,209 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-type="product" data-radius="soft" data-buttons="solid" data-motion>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; style-src 'self' 'unsafe-inline'; base-uri 'none'; object-src 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<meta name="theme-color" content="#0f2a4a">
-<title>Products | VeraGuard</title>
-<meta name="description" content="VeraGuard floor protection roll: 3 layers, waterproof top film, 36 in x 100 ft (300 sq ft), about 12 lb. 69.99 CAD + HST per roll.">
+<title>VeraGuard roll: specifications and price</title>
+<meta name="description" content="Specifications of the VeraGuard floor protection roll: 3 layers, 36 in x 100 ft, 300 sq ft, about 12 lb, 69.99 CAD + HST per roll.">
 <link rel="canonical" href="https://veraguard.ca/products.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="VeraGuard">
 <meta property="og:locale" content="en_CA">
-<meta property="og:title" content="Products | VeraGuard">
-<meta property="og:description" content="VeraGuard floor protection roll: 3 layers, waterproof top film, 36 in x 100 ft (300 sq ft), about 12 lb. 69.99 CAD + HST per roll.">
+<meta property="og:title" content="VeraGuard roll: specifications and price">
+<meta property="og:description" content="Specifications of the VeraGuard floor protection roll: 3 layers, 36 in x 100 ft, 300 sq ft, about 12 lb, 69.99 CAD + HST per roll.">
 <meta property="og:url" content="https://veraguard.ca/products.html">
 <meta property="og:image" content="https://veraguard.ca/assets/img/room-covered.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "VeraGuard floor protection roll", "description": "Self-adhesive, 3-layer floor protection roll with a waterproof top film. 36 in x 100 ft (300 sq ft), about 12 lb.", "brand": {"@type": "Brand", "name": "VeraGuard"}, "image": ["https://veraguard.ca/assets/img/roll-studio.jpg"], "offers": {"@type": "Offer", "price": "69.99", "priceCurrency": "CAD", "url": "https://veraguard.ca/products.html", "availability": "https://schema.org/InStock", "shippingDetails": {"@type": "OfferShippingDetails", "shippingRate": {"@type": "MonetaryAmount", "value": "0", "currency": "CAD"}, "shippingDestination": {"@type": "DefinedRegion", "addressCountry": "CA", "addressRegion": "ON"}}, "hasMerchantReturnPolicy": {"@type": "MerchantReturnPolicy", "applicableCountry": "CA", "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow", "merchantReturnDays": 30, "returnMethod": "https://schema.org/ReturnByMail"}}}</script>
+<meta name="theme-color" content="#f3f4f6">
+<meta name="site-kind" content="other">
+<meta name="page-type" content="product">
 <link rel="icon" type="image/png" href="assets/img/favicon-64.png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-<link rel="stylesheet" href="assets/style.css">
+<link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/system.css">
+<link rel="stylesheet" href="assets/ui/cards.css">
+<link rel="stylesheet" href="assets/motion/motion.css">
+<link rel="stylesheet" href="assets/layout/layout.css">
+<link rel="stylesheet" href="assets/vg.css">
+<script src="assets/boot.js"></script>
+<style>
+  main > .section.page-head { --h: auto; height: auto; min-height: 0; padding-top: calc(var(--nav) + var(--s-8)); padding-bottom: var(--s-8); }
+  .page-head h1 { font: var(--display-weight) clamp(40px, 4.4vw + 12px, 72px)/1.02 var(--font-display); letter-spacing: var(--display-tracking-xl); font-stretch: var(--display-stretch, 100%); margin: 0 0 var(--s-5); max-width: 18ch; }
+  .page-head .t-lead { max-width: 52ch; }
+  main > .section.flow { height: auto; min-height: 0; padding-block: var(--s-8); }
+  .flow + .flow { padding-top: 0; }
+  .flow.ground-inverse, .flow.ground-surface { padding-block: var(--s-9); }
+  .flow.ground-inverse + .flow, .flow.ground-surface + .flow { padding-top: var(--s-9); }
+  .flow h2 { margin-bottom: var(--s-5); }
+  .flow p + p { margin-top: var(--s-4); }
+  .stack-6 > * + * { margin-top: var(--s-6); }
+  .note { border-left: 3px solid var(--action); padding: var(--s-2) 0 var(--s-2) var(--s-5); }
+  .trades { display: flex; flex-wrap: wrap; gap: var(--s-3); padding: 0; margin: 0; list-style: none; }
+  .trades li { padding: var(--s-2) var(--s-4); border: 1px solid var(--line); border-radius: 999px; font-size: var(--t-small); }
+  .steps-list { counter-reset: s; list-style: none; padding: 0; margin: 0; }
+  .steps-list li { display: grid; grid-template-columns: 48px 1fr; gap: var(--s-2) var(--s-4); padding-block: var(--s-5); border-bottom: 1px solid var(--line); }
+  .steps-list li:first-child { padding-top: 0; }
+  .steps-list .step-num { grid-row: span 2; }
+  .steps-list h2 { font: 500 var(--t-lead)/1.3 var(--font-text); letter-spacing: 0; margin: 0; }
+  .steps-list p { margin: 0; }
+  .photos3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-5); }
+  @media (max-width: 639px) { .photos3 { grid-template-columns: 1fr; } main > .section.page-head { padding-top: calc(var(--nav) + var(--s-7)); } }
+</style>
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="site-header">
-  <div class="wrap">
-    <a class="brand" href="index.html"><img src="assets/img/logo.png" alt="VeraGuard" width="190" height="40"></a>
-    <nav class="nav" aria-label="Main">
-      <a href="index.html">Home</a>
-      <a href="products.html" aria-current="page">Products</a>
-      <a href="how-it-works.html">How It Works</a>
-      <a href="where-we-deliver.html">Where We Deliver</a>
-      <a class="nav-cta" href="quote.html">Quote Request</a>
-      <a href="contact.html">Contact</a>
+<header class="nav nav--split">
+  <div class="wrap nav__bar">
+    <a class="skip-link" href="#top">Skip to content</a>
+    <nav class="nav__links" aria-label="Main">
+      <div class="nav__item">
+        <a class="nav__link" href="index.html#roll" aria-current="page">Roll <svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div class="nav__menu">
+          <div class="wrap grid">
+            <a class="menu-card span-3" href="index.html#roll">
+              <div class="panel"><img class="frame__img" src="assets/img/roll-core-label.jpg" width="640" height="640" alt="A VeraGuard roll standing on end on a herringbone floor" loading="lazy"></div>
+              <span class="t-card">The roll</span>
+              <span class="t-small muted">69.99 CAD + HST, 300 sq ft</span>
+            </a>
+            <a class="menu-card span-3" href="index.html#layers">
+              <div class="panel"><img class="frame__img" src="assets/img/roll-end.jpg" width="640" height="640" alt="The end of a VeraGuard roll showing its wound layers" loading="lazy"></div>
+              <span class="t-card">Three layers</span>
+              <span class="t-small muted">Film, felt, adhesive backing</span>
+            </a>
+            <a class="menu-card span-3" href="assets/VeraGuard-Catalog.pdf">
+              <div class="panel"><img class="frame__img" src="assets/img/catalog-cover.jpg" width="765" height="990" alt="The cover of the VeraGuard catalog" loading="lazy"></div>
+              <span class="t-card">Catalog</span>
+              <span class="t-small muted">Specs on one page, PDF</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="nav__item"><a class="nav__link" href="how-it-works.html">Install</a></div>
+      <div class="nav__item"><a class="nav__link" href="where-we-deliver.html">Delivery</a></div>
+      <div class="nav__item"><a class="nav__link" href="index.html#faq">Questions</a></div>
     </nav>
+    <a class="nav__logo" href="#top"><img src="assets/img/logo-320.png" alt="VeraGuard floor protection" width="152" height="32"></a>
+    <div class="nav__actions">
+      <a class="btn btn--primary" href="quote.html">Request a quote</a>
+    </div>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-label="Menu">
+      <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5h14M2 13h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
   </div>
 </header>
 
-<main id="main">
-  <section class="page-head">
+<main id="top">
+  <section class="section page-head" data-enter aria-labelledby="page-h">
     <div class="wrap">
-      <h1>VeraGuard floor protection roll</h1>
-      <p>One roll size, one price, no tape.</p>
+      <h1 id="page-h">The VeraGuard roll, in full</h1>
+      <p class="t-lead">One roll size and one price: 69.99 CAD + HST, which works out to 0.23 CAD per sq ft. No minimum order.</p>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section flow" id="specs" aria-labelledby="specs-h">
     <div class="wrap">
-      <div class="product">
-        <figure class="photo">
-          <img src="assets/img/roll-studio.jpg" srcset="assets/img/roll-studio-480.jpg 480w, assets/img/roll-studio.jpg 720w" sizes="(max-width: 820px) 360px, 400px" width="720" height="1065" alt="A white VeraGuard roll partly unrolled on a herringbone hardwood floor" fetchpriority="high">
-          
-        </figure>
-        <div>
-          <div class="price"><span class="amount">69.99 CAD</span><span class="unit">+ HST per roll</span></div>
-          <p class="price-note">0.23 CAD per sq ft. No minimum order.</p>
-          <ul class="checks">
-            <li>36 in x 100 ft, covers 300 sq ft</li>
-            <li>About 12 lb per roll</li>
-            <li>3 layers in one sheet, waterproof top film</li>
-            <li>Self-adhesive, no tape needed</li>
-            <li>Delivered to the job site on 3 or more rolls, within 30 km in the GTA</li>
+      <div class="grid grid--top">
+        <div class="span-6">
+          <h2 id="specs-h">Specifications</h2>
+          <ul class="rows rows--spec">
+            <li><span class="rows__name">Construction</span><span class="rows__value">3 layers, 160 GSM</span></li>
+            <li><span class="rows__name">Top</span><span class="rows__value">Waterproof PE film</span></li>
+            <li><span class="rows__name">Middle</span><span class="rows__value">Non-woven felt</span></li>
+            <li><span class="rows__name">Underside</span><span class="rows__value">Self-adhesive, anti-slip</span></li>
+            <li><span class="rows__name">Roll size</span><span class="rows__value">36 in × 100 ft (91 cm × 30.5 m)</span></li>
+            <li><span class="rows__name">Coverage</span><span class="rows__value">300 sq ft (27.9 m²)</span></li>
+            <li><span class="rows__name">Weight</span><span class="rows__value">About 12 lb (5.4 kg)</span></li>
+            <li><span class="rows__name">Use on</span><span class="rows__value">Finished hardwood, tile, laminate, vinyl</span></li>
+            <li><span class="rows__name">Price</span><span class="rows__value">69.99 CAD + HST a roll</span></li>
+            <li><span class="rows__name">Minimum order</span><span class="rows__value">None</span></li>
+            <li><span class="rows__name">Job-site delivery</span><span class="rows__value">Free on 3+ rolls, 30 km in the GTA</span></li>
+            <li><span class="rows__name">Returns</span><span class="rows__value">Unopened rolls, 30 days</span></li>
           </ul>
-          <div class="actions"><a class="btn accent" href="quote.html">Request a quote</a></div>
+          <p class="note" style="margin-top: var(--s-6)"><strong>Please test a small area first.</strong> Floors and finishes vary, and there are no samples: a small patch from your first roll is the test.</p>
         </div>
+        <figure class="frame frame--photo span-6 start-7" style="--ratio: 125%">
+          <img class="frame__img" src="assets/img/roll-studio.jpg" srcset="assets/img/roll-studio-480.jpg 480w, assets/img/roll-studio.jpg 720w" sizes="(max-width: 639px) 100vw, 628px" width="720" height="1065" alt="A white VeraGuard roll partly unrolled on a herringbone hardwood floor" fetchpriority="high">
+        </figure>
       </div>
     </div>
   </section>
 
-  <section class="section navy on-navy catalog-band" id="catalog">
-    <div class="wrap catalog-inner">
-      <img class="catalog-cover" src="assets/img/catalog-cover.jpg" width="495" height="639" alt="Cover of the VeraGuard product catalog" loading="lazy">
-      <div class="catalog-text">
-        <h2>VeraGuard product catalog</h2>
-        <p>Specifications, how it goes down, coverage per roll and pricing, in one PDF you can save or forward to your crew.</p>
-        <div class="actions"><a class="btn accent big" href="assets/VeraGuard-Catalog.pdf" download>Download the catalog (PDF)</a></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section tint">
+  <section class="section flow ground-inverse" id="catalog" aria-labelledby="catalog-h">
     <div class="wrap">
-      <div class="section-head"><h2>Specifications</h2></div>
-      <table class="spec">
-        <caption class="hint" style="text-align:left;position:absolute;left:-999px">Product specifications</caption>
-        <tbody>
-          <tr><th scope="row">Construction</th><td>3 layers in one 160 GSM sheet: waterproof PE film on top, non-woven felt in the middle, self-adhesive, anti-slip layer underneath</td></tr>
-          <tr><th scope="row">Roll size</th><td>36 in x 100 ft (91 cm x 30.5 m)</td></tr>
-          <tr><th scope="row">Coverage</th><td>300 sq ft (27.9 m&sup2;) per roll</td></tr>
-          <tr><th scope="row">Roll weight</th><td>About 12 lb (5.4 kg)</td></tr>
-          <tr><th scope="row">Attachment</th><td>Self-adhesive. No tape needed for normal installation.</td></tr>
-          <tr><th scope="row">Use on</th><td>Finished hardwood, tile, laminate, vinyl and similar floors. Designed for temporary use.</td></tr>
-          <tr><th scope="row">Price</th><td>69.99 CAD + HST per roll (0.23 CAD per sq ft)</td></tr>
-          <tr><th scope="row">Minimum order</th><td>None</td></tr>
-          <tr><th scope="row">Job-site delivery</th><td>Free on 3 or more rolls, within 30 km in the GTA. Further out on request.</td></tr>
-          <tr><th scope="row">Returns</th><td>Unopened rolls can be returned within 30 days.</td></tr>
-        </tbody>
-      </table>
-      <div class="note" style="margin-top:32px">
-        <p><strong>Please test a small area first.</strong> Floor types and finishes vary. Samples are not available, so a small test patch from your first roll is the way to check.</p>
+      <div class="grid grid--top">
+        <div class="span-6 stack-4">
+          <h2 id="catalog-h">The VeraGuard catalog</h2>
+          <p>Specifications, how the sheet goes down, coverage per roll and the price on one PDF you can forward to your crew or your client.</p>
+          <div class="btn-row"><a class="btn btn--primary" href="assets/VeraGuard-Catalog.pdf" download>Download the catalog<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a></div>
+        </div>
+        <figure class="frame frame--photo span-4 start-9" style="--ratio: 129%">
+          <img class="frame__img" src="assets/img/catalog-cover.jpg" width="765" height="990" alt="The cover of the VeraGuard catalog" loading="lazy">
+        </figure>
       </div>
     </div>
   </section>
 
-  <section class="section" id="layers">
-    <div class="wrap split center">
-      <div>
-        <h2>What is inside</h2>
-        <p>Three layers in one 160 GSM sheet, with the self-adhesive layer facing the floor.</p>
-      </div>
-      <figure class="diagram"><svg class="layers-svg" viewBox="0 0 400 240" role="img" aria-labelledby="layers-title layers-desc" xmlns="http://www.w3.org/2000/svg">
-  <title id="layers-title">The three layers of the VeraGuard sheet</title>
-  <desc id="layers-desc">Cross-section, pulled apart for clarity: waterproof PE film on top, non-woven felt in the middle, and a self-adhesive, anti-slip layer underneath, above the finished floor.</desc>
-  <defs>
-    <pattern id="felt" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#f4f6f9"/><circle cx="2" cy="2" r="1" fill="#b9c6d6"/><circle cx="6" cy="5" r="1" fill="#c9d3e0"/><circle cx="3" cy="7" r=".8" fill="#b9c6d6"/></pattern>
-    <pattern id="floor" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="10" height="10" fill="#e3e9f1"/><path d="M0 0V10" stroke="#b7c4d6" stroke-width="2"/></pattern>
-  </defs>
-  <rect x="8" y="16" width="176" height="36" rx="3" fill="#dce8f6" stroke="#3d6a9c" stroke-width="1.5"/>
-  <path d="M18 27H110" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".9"/>
-  <rect x="8" y="66" width="176" height="52" rx="3" fill="url(#felt)" stroke="#3d6a9c" stroke-width="1.5"/>
-  <rect x="8" y="132" width="176" height="22" rx="3" fill="#f2711c"/>
-  <rect x="8" y="178" width="176" height="46" rx="3" fill="url(#floor)" stroke="#8ea1b9" stroke-width="1.5"/>
-  <g stroke="#0f2a4a" stroke-width="1.5" fill="none"><path d="M184 34H200"/><path d="M184 92H200"/><path d="M184 143H200"/><path d="M184 201H200"/></g>
-  <g font-family="Avenir Next, Segoe UI, system-ui, sans-serif" fill="#14233a">
-    <text x="208" y="32" font-size="16" font-weight="700">PE film on top</text><text x="208" y="50" font-size="13" fill="#4d5f78">Waterproof surface</text>
-    <text x="208" y="90" font-size="16" font-weight="700">Non-woven felt</text><text x="208" y="108" font-size="13" fill="#4d5f78">Soft protective body</text>
-    <text x="208" y="141" font-size="16" font-weight="700">Self-adhesive layer</text><text x="208" y="159" font-size="13" fill="#4d5f78">Sticks without tape</text>
-    <text x="208" y="206" font-size="16" font-weight="700">Your finished floor</text>
-  </g>
-</svg><figcaption>Illustration, layers pulled apart and not to scale.</figcaption></figure>
-    </div>
-  </section>
-
-  <section class="section tint">
-    <div class="wrap three">
-      <figure class="photo"><img src="assets/img/gallery-floor-roll.jpg" width="640" height="819" alt="A VeraGuard roll beside a sheet of floor protection laid on a wood floor in an empty room" loading="lazy"></figure>
-      <figure class="photo"><img src="assets/img/gallery-spill.jpg" width="640" height="819" alt="Paint spilled on a VeraGuard sheet on a wood floor, with a roll, a paint can and a ladder in the room" loading="lazy"></figure>
-      <figure class="photo"><img src="assets/img/gallery-install.jpg" width="640" height="819" alt="A worker in gloves pressing a VeraGuard sheet down onto a wood floor" loading="lazy"></figure>
-      <figure class="photo"><img src="assets/img/roll-core-label.jpg" width="640" height="640" alt="A white VeraGuard roll standing upright with a round VeraGuard label on the core" loading="lazy"></figure>
-      <figure class="photo"><img src="assets/img/roll-end.jpg" width="640" height="640" alt="End view of a white roll of VeraGuard film showing the layered sheet around a cardboard core" loading="lazy"></figure>
-      <figure class="photo"><img src="assets/img/gallery-delivery.jpg" width="640" height="640" alt="Three white VeraGuard rolls delivered to the doorway of a room with a herringbone wood floor" loading="lazy"></figure>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="wrap">
-      <h2>Made for the trades</h2>
-      <ul class="chips">
+  <section class="section flow" id="trades" aria-labelledby="trades-h">
+    <div class="wrap stack-6">
+      <h2 id="trades-h">Trades that lay VeraGuard</h2>
+      <ul class="trades">
         <li>Painters</li><li>Renovators</li><li>General contractors</li><li>Flooring installers</li>
         <li>Plumbers</li><li>Electricians</li><li>HVAC technicians</li><li>Demolition crews</li>
         <li>Restoration and cleaning</li><li>Movers</li><li>Property managers</li>
       </ul>
-      <p>Designed for temporary use while work is going on. Please test a small area first.</p>
+      <div class="photos3">
+        <figure class="frame frame--photo frame--square"><img class="frame__img" src="assets/img/gallery-floor-roll.jpg" width="640" height="819" alt="A VeraGuard roll beside a laid sheet in an empty room" loading="lazy"></figure>
+        <figure class="frame frame--photo frame--square"><img class="frame__img" src="assets/img/gallery-install.jpg" width="640" height="819" alt="A worker in gloves unrolling a VeraGuard sheet onto a wood floor" loading="lazy"></figure>
+        <figure class="frame frame--photo frame--square"><img class="frame__img" src="assets/img/gallery-delivery.jpg" width="640" height="640" alt="Three VeraGuard rolls in the doorway of a room with a herringbone floor" loading="lazy"></figure>
+      </div>
     </div>
   </section>
-  <section class="section navy on-navy">
-    <div class="wrap">
-      <h2>Tell us about your next job.</h2>
-      <p>Send the size of a typical job and we will reply with a quote.</p>
-      <div class="actions"><a class="btn accent" href="quote.html">Request a quote</a></div>
-    </div>
-  </section>
+
 </main>
 
-<footer class="site-footer">
+<footer class="footer closing footer--dark ground-inverse g2m" id="contact" aria-labelledby="close-h">
   <div class="wrap">
-    <div>
-      <p><strong>VeraGuard</strong></p>
-      <p>Self-adhesive floor protection roll.</p>
+    <div class="closing__cta close--word">
+      <div class="section-head--split">
+        <div><h2 id="close-h">Request a quote for your next job</h2><p class="t-lead">Send the floor area and the site's city. We reply with a price for rolls and delivery.</p></div>
+        <a class="btn btn--primary" href="quote.html">Request a quote<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+      </div>
+      <p class="close__word" aria-hidden="true">VeraGuard</p>
     </div>
-    <div>
-      <p><a href="mailto:sales@veraguard.ca">sales@veraguard.ca</a></p>
-      <p><a href="tel:+14375752101">+1 437-575-2101</a></p>
-      <p>Based in Woodbridge, ON</p>
+    <div class="closing__links">
+      <div class="grid">
+        <div class="span-4 stack-4">
+          <a class="nav__logo" href="index.html"><img class="footer__logo" src="assets/img/logo-white-360.png" alt="VeraGuard floor protection" width="171" height="36" loading="lazy"></a>
+          <p class="footer__lede">Self-adhesive floor protection, from Woodbridge, ON.</p>
+        </div>
+        <div class="span-2 footer__col"><h3>Roll</h3><ul><li><a href="products.html">Specifications</a></li><li><a href="index.html#layers">Layers</a></li><li><a href="assets/VeraGuard-Catalog.pdf">Catalog PDF</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Install</h3><ul><li><a href="how-it-works.html">How to lay it</a></li><li><a href="index.html#faq">Questions</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Delivery</h3><ul><li><a href="where-we-deliver.html">Delivery area</a></li><li><a href="quote.html">Quote request</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Contact</h3><ul><li><a href="mailto:sales@veraguard.ca">sales@veraguard.ca</a></li><li><a href="tel:+14375752101">+1 437-575-2101</a></li><li><a href="contact.html">Contact page</a></li></ul></div>
+      </div>
+      <div class="footer__legal">
+        <span>&copy; 2026 VeraGuard &nbsp; <a href="privacy.html">Privacy and cookies</a> &nbsp; Prices in CAD, plus HST</span>
+        <div class="socials"></div>
+      </div>
+      <div class="consent ground-base" id="consent" role="region" aria-label="Cookie notice" hidden>
+        <p>We use Google Analytics to see which pages are useful. It only runs if you accept. <a class="link" href="privacy.html">Privacy and cookies</a></p>
+        <div class="btn-row">
+          <button class="btn btn--primary" id="consent-yes" type="button">Accept analytics</button>
+          <button class="btn btn--secondary" id="consent-no" type="button">Decline</button>
+        </div>
+      </div>
     </div>
-    <div>
-      <p><a href="quote.html">Request a quote</a></p>
-      <p><a href="assets/VeraGuard-Catalog.pdf" download>Download catalog (PDF)</a></p>
-      <p><a href="privacy.html">Privacy and cookies</a></p>
-    </div>
-    <p class="legal">&copy; 2026 VeraGuard. Prices are in Canadian dollars and exclude HST.</p>
   </div>
 </footer>
 
-<div class="consent" id="consent" role="region" aria-label="Cookie notice" hidden>
-  <div class="wrap">
-    <p>We use Google Analytics to see which pages are useful. It only runs if you accept. <a href="privacy.html">Privacy and cookies</a></p>
-    <div class="actions">
-      <button class="btn" id="consent-yes" type="button">Accept analytics</button>
-      <button class="btn ghost" id="consent-no" type="button">Decline</button>
-    </div>
-  </div>
-</div>
+<nav class="actionbar" aria-label="Quick actions">
+  <a class="btn btn--primary" href="quote.html">Request a quote</a>
+</nav>
+
+<script type="module" src="assets/system.js"></script>
+<script type="module" src="assets/motion/motion.js"></script>
+<script type="module" src="assets/layout/layout.js"></script>
 <script src="assets/site.js" defer></script>
 </body>
 </html>
