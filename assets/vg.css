@@ -86,6 +86,18 @@ main > .hero--product .hero__stage:has(> img:not(.is-cutout), > picture) {
 .faq__mail { margin: 0; }
 .faq > .faq__item:first-child { padding-top: 0; }
 @media (max-width: 639px) {
-  .rows--spec > li { grid-template-columns: auto minmax(0, 1fr); }
-  .rows--spec .rows__value { text-align: right; }
+  /* phone: name in a fixed left column, value fills the rest and wraps at word gaps only */
+  .rows > li { grid-template-columns: minmax(7.5em, 38%) minmax(0, 1fr); align-items: baseline; }
+  .rows__value { max-width: none; white-space: normal; text-align: right; text-wrap: pretty; overflow-wrap: normal; }
+  .rows > li > p { grid-column: 1 / -1; }
+}
+
+/* Phone fixes (16 Nov 2026): inline arrow links inside a sentence stay in the line,
+   the footer legal line wraps tight, and a button row keeps space before the next column. */
+p .link { display: inline; padding: 0; min-height: 0; }
+p .link::after { margin-left: .25em; }
+.footer__legal > span { display: flex; flex-wrap: wrap; align-items: center; column-gap: var(--s-4); row-gap: 0; }
+@media (max-width: 767px) {
+  .footer__legal > span a { min-height: 0; min-width: 0; padding-block: var(--s-2); }
+  .btn-row { margin-bottom: var(--s-6); }
 }
