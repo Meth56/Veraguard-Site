@@ -50,6 +50,8 @@
   .steps-list p { margin: 0; }
   .photos3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-5); }
   @media (max-width: 639px) { .photos3 { grid-template-columns: 1fr; } main > .section.page-head { padding-top: calc(var(--nav) + var(--s-6)); } }
+  .pano { --ratio: 21%; }
+  @media (max-width: 639px) { .pano { --ratio: 62%; } }
 </style>
 </head>
 <body>
@@ -117,6 +119,14 @@
           <p>Working outside the GTA? Name the job site in your <a class="link" href="quote.html">quote request</a> and we will work out delivery with you.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="section flow" id="van" aria-label="Rolls delivered to a job site">
+    <div class="wrap">
+      <figure class="frame frame--photo pano">
+        <img class="frame__img" src="assets/img/delivery-van.jpg" width="2209" height="464" alt="A driver carries a white VeraGuard roll from a delivery van to a house, with more rolls standing on the driveway" loading="lazy" style="object-position: 58% 50%">
+      </figure>
     </div>
   </section>
 
