@@ -50,7 +50,7 @@
   #film .film > video:focus-visible { outline: 2px solid var(--p-ink); outline-offset: 3px; }
   #film .film__chapters { margin-top: var(--s-5); }
   #delivery .bleed { margin: 0; width: 100%; height: clamp(240px, 30vw, 440px); overflow: clip; border-radius: var(--r-lg); }
-  #delivery .bleed > img { width: 100%; height: 100%; object-fit: cover; object-position: 60% 60%; display: block; }
+  #delivery .bleed > img { width: 100%; height: 100%; object-fit: cover; object-position: 64% 50%; display: block; }
   @media (min-width: 1024px) and (max-width: 1279px) { #steps .grid > .card { grid-column: span 4; } #steps .panel { --p-h: 240px; } }
   @media (max-width: 1023px) {
     #roll .roll__pic { --ratio: 36%; }
@@ -66,7 +66,7 @@
     #roll .roll__pic { --ratio: 30%; order: -1; }
     #roll .rows__wide { display: none; }
     #roll .roll__pic > img { object-position: 50% 44% !important; }
-    #delivery .bleed { height: auto; aspect-ratio: 4 / 3; }
+    #delivery .bleed { height: auto; aspect-ratio: 16 / 9; } #delivery .bleed > img { object-position: 74% 50%; }
   }
 </style>
 </head>
@@ -298,7 +298,7 @@
         <div class="span-6 start-7 stack-2"><p>Free on 3 rolls or more in the GTA. Outside the GTA? We deliver further out on request.</p><p><a class="link" href="where-we-deliver.html">See delivery area</a></p></div>
       </div>
       <figure class="bleed" data-moment="picture-develops">
-        <img src="assets/img/delivery-rolls.jpg" srcset="assets/img/delivery-rolls-800.jpg 800w, assets/img/delivery-rolls.jpg 1200w" sizes="(max-width: 639px) 720px, 100vw" width="1200" height="670" alt="Three VeraGuard rolls stacked in the doorway of a house under renovation, a herringbone hallway behind" loading="lazy" data-source="client" data-subject="three rolls delivered to a site">
+        <img src="assets/img/delivery-van.jpg" width="2209" height="464" alt="A driver carries a VeraGuard roll from a white delivery van to a house, three more rolls standing on the driveway" loading="lazy" data-source="client" data-subject="rolls delivered to a house from a van">
       </figure>
     </div>
   </section>
